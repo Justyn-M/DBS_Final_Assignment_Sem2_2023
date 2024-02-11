@@ -1,0 +1,229 @@
+Query OK, 1 row affected (0.02 sec)
+
++--------------------------------+
+| Database                       |
++--------------------------------+
+| DsWork                         |
+| FA_2                           |
+| Nobel_Prize_Laureates_21029112 |
+| Nobel_Prize_Winners_21029112   |
+| dswork                         |
+| information_schema             |
+| mysql                          |
+| performance_schema             |
+| sys                            |
++--------------------------------+
+9 rows in set (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+Query OK, 0 rows affected (0.05 sec)
+
+Query OK, 0 rows affected (0.04 sec)
+
+Query OK, 15 rows affected (0.01 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+Query OK, 15 rows affected (0.01 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+Query OK, 12 rows affected (0.00 sec)
+Records: 12  Duplicates: 0  Warnings: 0
+
++------------------------------------------+
+| Tables_in_Nobel_Prize_Laureates_21029112 |
++------------------------------------------+
+| Affiliation                              |
+| Prize                                    |
+| Winner                                   |
+| associated_with                          |
+| received_by                              |
++------------------------------------------+
+5 rows in set (0.01 sec)
+
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| PrizeID      | int          | NO   | PRI | NULL    | auto_increment |
+| Field        | varchar(30)  | NO   |     | NULL    |                |
+| Year_Awarded | year         | NO   |     | NULL    |                |
+| Medal        | varchar(100) | NO   |     | NULL    |                |
+| Diploma      | text         | NO   |     | NULL    |                |
+| Cash_Award   | int          | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+6 rows in set (0.00 sec)
+
++------------+--------------+------+-----+---------+----------------+
+| Field      | Type         | Null | Key | Default | Extra          |
++------------+--------------+------+-----+---------+----------------+
+| WinnerID   | int          | NO   | PRI | NULL    | auto_increment |
+| First_Name | varchar(100) | NO   |     | NULL    |                |
+| Last_Name  | varchar(30)  | YES  |     | NULL    |                |
+| DOB        | date         | YES  |     | NULL    |                |
+| DOD        | date         | YES  |     | NULL    |                |
+| Gender     | varchar(6)   | YES  |     | NULL    |                |
+| Country    | varchar(50)  | NO   |     | NULL    |                |
++------------+--------------+------+-----+---------+----------------+
+7 rows in set (0.00 sec)
+
++---------------+--------------+------+-----+---------+----------------+
+| Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| AffiliationID | int          | NO   | PRI | NULL    | auto_increment |
+| Name          | varchar(100) | NO   |     | NULL    |                |
+| City          | varchar(50)  | YES  |     | NULL    |                |
+| Country       | varchar(50)  | NO   |     | NULL    |                |
+| Type          | varchar(50)  | NO   |     | NULL    |                |
++---------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.00 sec)
+
+Query OK, 15 rows affected (0.01 sec)
+Records: 15  Duplicates: 0  Warnings: 0
+
+Query OK, 13 rows affected (0.01 sec)
+Records: 13  Duplicates: 0  Warnings: 0
+
++------------+----------------+
+| First_Name | Last_Name      |
++------------+----------------+
+| Johann     | Deisenhofer    |
+| Maria      | Goeppert Mayer |
++------------+----------------+
+2 rows in set (0.00 sec)
+
++-------------------+----------------------------------------------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field             | Medal                                                                      | Year_Awarded | Diploma                                                                                                                                                                                              |
++-------------------+----------------------------------------------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Chemistry         | The Nobel Prize in Chemistry                                               |         2004 | for the discovery of ubiquitin-mediated protein degradation                                                                                                                                          |
+| Economic Sciences | The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel |         2001 | for their analyses of markets with asymmetric information                                                                                                                                            |
+| Peace             | The Nobel Peace Prize                                                      |         2019 | for his efforts to achieve peace and international cooperation, and in particular for his decisive initiative to resolve the border conflict with neighbouring Eritrea                               |
+| Physics           | The Nobel Prize in Physics                                                 |         1994 | for pioneering contributions to the development of neutron scattering techniques for studies of condensed matter                                                                                     |
+| Economic Sciences | The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel |         2019 | for their experimental approach to alleviating global poverty                                                                                                                                        |
+| Literature        | The Nobel Prize in  Literature                                             |         1997 | who emulates the jesters of the Middle Ages in scourging authority and upholding the dignity of the downtrodden                                                                                      |
+| Physics           | The Nobel Prize in Physics                                                 |         2018 | for their method of generating high-intensity, ultra-short optical pulses                                                                                                                            |
+| Peace             | The Nobel Peace Prize                                                      |         2017 | for its work to draw attention to the catastrophic humanitarian consequences of any use of nuclear weapons and for its ground-breaking efforts to achieve a treaty-based prohibition of such weapons |
++-------------------+----------------------------------------------------------------------------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+8 rows in set (0.00 sec)
+
++-------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Field             | Medal                                                                      | Diploma                                                                                                                                                                |
++-------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Peace             | The Nobel Peace Prize                                                      | for his efforts to achieve peace and international cooperation, and in particular for his decisive initiative to resolve the border conflict with neighbouring Eritrea |
+| Economic Sciences | The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel | for their experimental approach to alleviating global poverty                                                                                                          |
++-------------------+----------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+2 rows in set (0.00 sec)
+
++------------+----------------+
+| First_Name | Last_Name      |
++------------+----------------+
+| Esther     | Duflo          |
+| Donna      | Strickland     |
+| Maria      | Goeppert Mayer |
++------------+----------------+
+3 rows in set (0.00 sec)
+
++----------+
+| COUNT(*) |
++----------+
+|        9 |
++----------+
+1 row in set (0.00 sec)
+
++-------------------+--------------+
+| Field             | Year_Awarded |
++-------------------+--------------+
+| Chemistry         |         2004 |
+| Economic Sciences |         2001 |
+| Peace             |         2019 |
+| Physics           |         1994 |
+| Economic Sciences |         2019 |
+| Literature        |         1997 |
+| Physics           |         2018 |
+| Peace             |         2017 |
++-------------------+--------------+
+8 rows in set (0.00 sec)
+
++-------------+-----------+
+| First_Name  | Last_Name |
++-------------+-----------+
+| Clifford G. | Shull     |
+| Esther      | Duflo     |
++-------------+-----------+
+2 rows in set (0.01 sec)
+
++------------------------+--------------+----------------------------------------------------------------------------+------------+----------------+
+| Field                  | Year_Awarded | Medal                                                                      | First_Name | Last_Name      |
++------------------------+--------------+----------------------------------------------------------------------------+------------+----------------+
+| Physics                |         1975 | The Nobel Prize in Physics                                                 | Aage Niels | Bohr           |
+| Economic Sciences      |         2001 | The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel | A. Michael | Spence         |
+| Physiology or Medicine |         1963 | The Nobel Prize in Physiology or Medicine                                  | Alan       | Hodgkin        |
+| Physics                |         2018 | The Nobel Prize in Physics                                                 | Donna      | Strickland     |
+| Chemistry              |         1988 | The Nobel Prize in Chemistry                                               | Johann     | Deisenhofer    |
+| Physics                |         1963 | The Nobel Prize in Physics                                                 | Maria      | Goeppert Mayer |
++------------------------+--------------+----------------------------------------------------------------------------+------------+----------------+
+6 rows in set (0.00 sec)
+
++--------+-------+
+| Gender | Count |
++--------+-------+
+| Male   |     9 |
+| Female |     3 |
++--------+-------+
+2 rows in set (0.00 sec)
+
++----------------------------+
+| COUNT(DISTINCT W.WinnerID) |
++----------------------------+
+|                          2 |
++----------------------------+
+1 row in set (0.00 sec)
+
++---------+--------------+
+| Field   | Winner_Count |
++---------+--------------+
+| Physics |            4 |
++---------+--------------+
+1 row in set (0.00 sec)
+
++---------+-------------------+
+| Country | Number_of_Winners |
++---------+-------------------+
+| USA     |                 4 |
++---------+-------------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
+Query OK, 1 row affected (0.01 sec)
+
+Query OK, 1 row affected (0.00 sec)
+
++------------+-----------+
+| First_Name | Last_Name |
++------------+-----------+
+| Alan       | Hodgkin   |
+| Ilya       | Mechnikov |
+| Andrew Z.  | Fire      |
++------------+-----------+
+3 rows in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> 
